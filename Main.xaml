@@ -103,7 +103,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1156,1288.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1156,6476.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="CurrentDate" />
     </Sequence.Variables>
@@ -112,7 +112,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign sap:VirtualizedContainerService.HintSize="822.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="s:DateTime">[CurrentDate]</OutArgument>
       </Assign.To>
@@ -120,22 +120,22 @@
         <InArgument x:TypeArguments="s:DateTime">[Now]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:RetryScope DisplayName="Day to Week Workflow" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="RetryScope_5">
+    <ui:RetryScope DisplayName="Day to Week Workflow" sap:VirtualizedContainerService.HintSize="822.4,1908.8" sap2010:WorkflowViewState.IdRef="RetryScope_5">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="713.6,1804.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="713.6,1620.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="hamzabinnkashif@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="680,1744.8" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_5" Mode="EnterId" SpreadsheetId="19nQaEwaV9H0a1l_F-8e80nGye7EXYtzxFfI5SR03hF4" UseConnectionService="False" UserEmail="hamzabinnkashif@gmail.com">
+            <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="hamzabinnkashif@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="680,1560.8" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_5" Mode="EnterId" SpreadsheetId="19nQaEwaV9H0a1l_F-8e80nGye7EXYtzxFfI5SR03hF4" UseConnectionService="False" UserEmail="hamzabinnkashif@gmail.com">
               <ugas:GoogleSheetsApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="Spreadsheet" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="646.4,1396" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="646.4,1252" sap2010:WorkflowViewState.IdRef="Sequence_22">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="DT_SHEET" />
                     </Sequence.Variables>
@@ -145,21 +145,27 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <uga:ReadRange ContinueOnError="{x:Null}" Range="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="612.8,245.6" sap2010:WorkflowViewState.IdRef="ReadRange_5" IncludeHeaders="True" Result="[DT_SHEET]" SheetName="SAM ROI Actual" />
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_SHEET]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="612.8,1090.4" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_SHEET]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="612.8,946.4" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="579.2,901.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="579.2,757.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[Not IsDBNull(row(&quot;Day Count&quot;)) AndAlso Convert.ToInt32(row(&quot;Day Count&quot;)) &gt; 0]" sap:VirtualizedContainerService.HintSize="545.6,841.6" sap2010:WorkflowViewState.IdRef="If_5">
+                            <If Condition="[Not IsDBNull(row(&quot;Day Count&quot;)) AndAlso Convert.ToInt32(row(&quot;Day Count&quot;)) &gt; 0]" sap:VirtualizedContainerService.HintSize="545.6,697.6" sap2010:WorkflowViewState.IdRef="If_5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,590.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,446.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:Int32" Name="WeekCount" />
                                   </Sequence.Variables>
@@ -168,25 +174,9 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="478.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_5">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:Int32">[WeekCount]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:Int32">[If(IsDBNull(row("Week Count")), 0, Convert.ToInt32(row("Week Count")))]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                                     <ui:MultipleAssign.AssignOperations>
                                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
-                                          <ui:AssignOperation.To>
-                                            <OutArgument x:TypeArguments="x:Object">[row("Week Count")]</OutArgument>
-                                          </ui:AssignOperation.To>
-                                          <ui:AssignOperation.Value>
-                                            <InArgument x:TypeArguments="x:Object">[WeekCount + Convert.ToInt32(row("Day Count"))]</InArgument>
-                                          </ui:AssignOperation.Value>
-                                        </ui:AssignOperation>
                                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
                                           <ui:AssignOperation.To>
                                             <OutArgument x:TypeArguments="x:Object">[row("Day Count")]</OutArgument>
@@ -237,35 +227,41 @@
       </ui:RetryScope.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <If Condition="[CurrentDate.DayOfWeek = DayOfWeek.Monday]" DisplayName="If Day is Monday" sap:VirtualizedContainerService.HintSize="449.6,368" sap2010:WorkflowViewState.IdRef="If_6">
+    <If Condition="[CurrentDate.DayOfWeek = DayOfWeek.Monday]" DisplayName="If Day is Monday" sap:VirtualizedContainerService.HintSize="822.4,2220" sap2010:WorkflowViewState.IdRef="If_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_28">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="788.8,1960" sap2010:WorkflowViewState.IdRef="Sequence_28">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:RetryScope DisplayName="Week to Month" sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="RetryScope_3">
+          <ui:RetryScope DisplayName="Week to Month" sap:VirtualizedContainerService.HintSize="755.2,1900" sap2010:WorkflowViewState.IdRef="RetryScope_3">
             <ui:RetryScope.ActivityBody>
               <ActivityAction>
-                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="713.6,1764.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="713.6,1620.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="hamzabinnkashif@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="680,1704.8" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_2" Mode="EnterId" SpreadsheetId="19nQaEwaV9H0a1l_F-8e80nGye7EXYtzxFfI5SR03hF4" UseConnectionService="False" UserEmail="hamzabinnkashif@gmail.com">
+                  <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="hamzabinnkashif@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="680,1560.8" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_2" Mode="EnterId" SpreadsheetId="19nQaEwaV9H0a1l_F-8e80nGye7EXYtzxFfI5SR03hF4" UseConnectionService="False" UserEmail="hamzabinnkashif@gmail.com">
                     <ugas:GoogleSheetsApplicationScope.Body>
                       <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="Spreadsheet" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="646.4,1396" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="646.4,1252" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="sd:DataTable" Name="DT_SHEET" />
                           </Sequence.Variables>
@@ -275,21 +271,21 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <uga:ReadRange ContinueOnError="{x:Null}" Range="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="612.8,245.6" sap2010:WorkflowViewState.IdRef="ReadRange_2" IncludeHeaders="True" Result="[DT_SHEET]" SheetName="SAM ROI Actual" />
-                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_SHEET]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="612.8,1090.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_SHEET]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="612.8,946.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                             <ui:ForEachRow.Body>
                               <ActivityAction x:TypeArguments="sd:DataRow">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="579.2,901.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="579.2,757.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[Not IsDBNull(row(&quot;Week Count&quot;)) AndAlso Convert.ToInt32(row(&quot;Week Count&quot;)) &gt; 0]" sap:VirtualizedContainerService.HintSize="545.6,841.6" sap2010:WorkflowViewState.IdRef="If_2">
+                                  <If Condition="[Not IsDBNull(row(&quot;Week Count&quot;)) AndAlso Convert.ToInt32(row(&quot;Week Count&quot;)) &gt; 0]" sap:VirtualizedContainerService.HintSize="545.6,697.6" sap2010:WorkflowViewState.IdRef="If_2">
                                     <If.Then>
-                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,590.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,446.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:Int32" Name="WeekCount" />
                                           <Variable x:TypeArguments="x:Int32" Name="MonthCount" />
@@ -300,25 +296,9 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Assign sap:VirtualizedContainerService.HintSize="478.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:Int32">[MonthCount]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:Int32">[If(IsDBNull(row("Month Count")), 0, Convert.ToInt32(row("Week Count")))]</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                                           <ui:MultipleAssign.AssignOperations>
                                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                                                <ui:AssignOperation.To>
-                                                  <OutArgument x:TypeArguments="x:Object">[row("Month Count")]</OutArgument>
-                                                </ui:AssignOperation.To>
-                                                <ui:AssignOperation.Value>
-                                                  <InArgument x:TypeArguments="x:Object">[MonthCount + Convert.ToInt32(row("Week Count"))]</InArgument>
-                                                </ui:AssignOperation.Value>
-                                              </ui:AssignOperation>
                                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
                                                 <ui:AssignOperation.To>
                                                   <OutArgument x:TypeArguments="x:Object">[row("Week Count")]</OutArgument>
@@ -369,7 +349,7 @@
             </ui:RetryScope.Condition>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -386,30 +366,36 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[CurrentDate.Day = 1]" DisplayName="If New Month" sap:VirtualizedContainerService.HintSize="449.6,368" sap2010:WorkflowViewState.IdRef="If_7">
+    <If Condition="[CurrentDate.Day = 1]" DisplayName="If New Month" sap:VirtualizedContainerService.HintSize="822.4,2211.2" sap2010:WorkflowViewState.IdRef="If_7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_30">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="788.8,1960" sap2010:WorkflowViewState.IdRef="Sequence_30">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:RetryScope DisplayName="Month to year" sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+          <ui:RetryScope DisplayName="Month to year" sap:VirtualizedContainerService.HintSize="755.2,1900" sap2010:WorkflowViewState.IdRef="RetryScope_1">
             <ui:RetryScope.ActivityBody>
               <ActivityAction>
-                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="713.6,1764.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="713.6,1620.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="hamzabinnkashif@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="680,1704.8" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_1" Mode="EnterId" SpreadsheetId="19nQaEwaV9H0a1l_F-8e80nGye7EXYtzxFfI5SR03hF4" UseConnectionService="False" UserEmail="hamzabinnkashif@gmail.com">
+                  <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="hamzabinnkashif@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="680,1560.8" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_1" Mode="EnterId" SpreadsheetId="19nQaEwaV9H0a1l_F-8e80nGye7EXYtzxFfI5SR03hF4" UseConnectionService="False" UserEmail="hamzabinnkashif@gmail.com">
                     <ugas:GoogleSheetsApplicationScope.Body>
                       <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="Spreadsheet" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="646.4,1396" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="646.4,1252" sap2010:WorkflowViewState.IdRef="Sequence_2">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="sd:DataTable" Name="DT_SHEET" />
                           </Sequence.Variables>
@@ -419,21 +405,21 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <uga:ReadRange ContinueOnError="{x:Null}" Range="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="612.8,245.6" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Result="[DT_SHEET]" SheetName="SAM ROI Actual" />
-                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_SHEET]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="612.8,1090.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_SHEET]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="612.8,946.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                             <ui:ForEachRow.Body>
                               <ActivityAction x:TypeArguments="sd:DataRow">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="579.2,901.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="579.2,757.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[Not IsDBNull(row(&quot;Month Count&quot;)) AndAlso Convert.ToInt32(row(&quot;Month Count&quot;)) &gt; 0]" sap:VirtualizedContainerService.HintSize="545.6,841.6" sap2010:WorkflowViewState.IdRef="If_1">
+                                  <If Condition="[Not IsDBNull(row(&quot;Month Count&quot;)) AndAlso Convert.ToInt32(row(&quot;Month Count&quot;)) &gt; 0]" sap:VirtualizedContainerService.HintSize="545.6,697.6" sap2010:WorkflowViewState.IdRef="If_1">
                                     <If.Then>
-                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,590.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,446.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:Int32" Name="WeekCount" />
                                           <Variable x:TypeArguments="x:Int32" Name="MonthCount" />
@@ -444,25 +430,9 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Assign sap:VirtualizedContainerService.HintSize="478.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:Int32">[YearCount]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:Int32">[If(IsDBNull(row("Year Count")), 0, Convert.ToInt32(row("Year Count")))]</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                                           <ui:MultipleAssign.AssignOperations>
                                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                                                <ui:AssignOperation.To>
-                                                  <OutArgument x:TypeArguments="x:Object">[row("Year Count")]</OutArgument>
-                                                </ui:AssignOperation.To>
-                                                <ui:AssignOperation.Value>
-                                                  <InArgument x:TypeArguments="x:Object">[YearCount + Convert.ToInt32(row("Month Count"))]</InArgument>
-                                                </ui:AssignOperation.Value>
-                                              </ui:AssignOperation>
                                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
                                                 <ui:AssignOperation.To>
                                                   <OutArgument x:TypeArguments="x:Object">[row("Month Count")]</OutArgument>
@@ -513,7 +483,7 @@
             </ui:RetryScope.Condition>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -522,151 +492,6 @@
       </If.Then>
       <If.Else>
         <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_31">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </Sequence>
-      </If.Else>
-    </If>
-    <If Condition="[CurrentDate.Month = 1 AndAlso CurrentDate.Day = 1]" DisplayName="If New Year" sap:VirtualizedContainerService.HintSize="449.6,359.2" sap2010:WorkflowViewState.IdRef="If_8">
-      <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_32">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:RetryScope DisplayName="Previous Year to New Year" sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="RetryScope_2">
-            <ui:RetryScope.ActivityBody>
-              <ActivityAction>
-                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="713.6,1764.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="hamzabinnkashif@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="680,1704.8" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_3" Mode="EnterId" SpreadsheetId="19nQaEwaV9H0a1l_F-8e80nGye7EXYtzxFfI5SR03hF4" UseConnectionService="False" UserEmail="hamzabinnkashif@gmail.com">
-                    <ugas:GoogleSheetsApplicationScope.Body>
-                      <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="Spreadsheet" />
-                        </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="646.4,1396" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="sd:DataTable" Name="DT_SHEET" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <uga:ReadRange ContinueOnError="{x:Null}" Range="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="612.8,245.6" sap2010:WorkflowViewState.IdRef="ReadRange_3" IncludeHeaders="True" Result="[DT_SHEET]" SheetName="SAM ROI Actual" />
-                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_SHEET]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="612.8,1090.4" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
-                            <ui:ForEachRow.Body>
-                              <ActivityAction x:TypeArguments="sd:DataRow">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                                </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="579.2,901.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[Not IsDBNull(row(&quot;Year Count&quot;)) AndAlso Convert.ToInt32(row(&quot;Year Count&quot;)) &gt; 0]" sap:VirtualizedContainerService.HintSize="545.6,841.6" sap2010:WorkflowViewState.IdRef="If_3">
-                                    <If.Then>
-                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,590.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                                        <Sequence.Variables>
-                                          <Variable x:TypeArguments="x:Int32" Name="WeekCount" />
-                                          <Variable x:TypeArguments="x:Int32" Name="MonthCount" />
-                                          <Variable x:TypeArguments="x:Int32" Name="YearCount" />
-                                          <Variable x:TypeArguments="x:Int32" Name="PreviousYearCount" />
-                                        </Sequence.Variables>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <Assign sap:VirtualizedContainerService.HintSize="478.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:Int32">[PreviousYearCount]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:Int32">[If(IsDBNull(row("Previous Year Count")), 0, Convert.ToInt32(row("Previous Year Count")))]</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
-                                          <ui:MultipleAssign.AssignOperations>
-                                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-                                                <ui:AssignOperation.To>
-                                                  <OutArgument x:TypeArguments="x:Object">[row("Previous Year Count")]</OutArgument>
-                                                </ui:AssignOperation.To>
-                                                <ui:AssignOperation.Value>
-                                                  <InArgument x:TypeArguments="x:Object">[PreviousYearCount + Convert.ToInt32(row("Year Count"))]</InArgument>
-                                                </ui:AssignOperation.Value>
-                                              </ui:AssignOperation>
-                                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-                                                <ui:AssignOperation.To>
-                                                  <OutArgument x:TypeArguments="x:Object">[row("Year Count")]</OutArgument>
-                                                </ui:AssignOperation.To>
-                                                <ui:AssignOperation.Value>
-                                                  <InArgument x:TypeArguments="x:Object">[0]</InArgument>
-                                                </ui:AssignOperation.Value>
-                                              </ui:AssignOperation>
-                                            </scg:List>
-                                          </ui:MultipleAssign.AssignOperations>
-                                        </ui:MultipleAssign>
-                                        <uga:WriteRange ContinueOnError="{x:Null}" Request="{x:Null}" Result="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DataTable="[DT_SHEET]" DisplayName="Write Range" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="478.4,236.8" sap2010:WorkflowViewState.IdRef="WriteRange_3" IncludeHeaders="True" IsInsideBatchUpdateScope="False" SheetName="SAM ROI Actual" StartingCell="A1" />
-                                      </Sequence>
-                                    </If.Then>
-                                    <If.Else>
-                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </Sequence>
-                                    </If.Else>
-                                  </If>
-                                </Sequence>
-                              </ActivityAction>
-                            </ui:ForEachRow.Body>
-                          </ui:ForEachRow>
-                        </Sequence>
-                      </ActivityAction>
-                    </ugas:GoogleSheetsApplicationScope.Body>
-                    <ugas:GoogleSheetsApplicationScope.CredentialID>
-                      <InArgument x:TypeArguments="x:String">
-                        <Literal x:TypeArguments="x:String" Value="" />
-                      </InArgument>
-                    </ugas:GoogleSheetsApplicationScope.CredentialID>
-                    <ugas:GoogleSheetsApplicationScope.CredentialSecret>
-                      <InArgument x:TypeArguments="x:String">
-                        <Literal x:TypeArguments="x:String" Value="" />
-                      </InArgument>
-                    </ugas:GoogleSheetsApplicationScope.CredentialSecret>
-                  </ugas:GoogleSheetsApplicationScope>
-                </Sequence>
-              </ActivityAction>
-            </ui:RetryScope.ActivityBody>
-            <ui:RetryScope.Condition>
-              <ActivityFunc x:TypeArguments="x:Boolean" />
-            </ui:RetryScope.Condition>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:RetryScope>
-        </Sequence>
-      </If.Then>
-      <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
